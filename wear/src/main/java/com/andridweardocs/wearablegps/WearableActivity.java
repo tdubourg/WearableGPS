@@ -25,7 +25,7 @@ public class WearableActivity extends Activity implements
         GoogleApiClient.OnConnectionFailedListener,
         LocationListener {
 
-    private static final String TAG = "GolfActivity";
+    private static final String TAG = "WearableActivity";
 
     private static final String KEY_IN_RESOLUTION = "is_in_resolution";
 
