@@ -18,6 +18,8 @@ import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.location.LocationListener;
 
+import java.util.concurrent.TimeUnit;
+
 public class WearableActivity extends Activity implements
         GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener,
@@ -138,9 +140,9 @@ public class WearableActivity extends Activity implements
         // Use high accuracy
         locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
         // Set the update interval to 2 seconds
-        locationRequest.setInterval(2);
+        locationRequest.setInterval(TimeUnit.SECONDS.toMillis(2));
         // Set the fastest update interval to 2 seconds
-        locationRequest.setFastestInterval(2);
+        locationRequest.setFastestInterval(TimeUnit.SECONDS.toMillis(2));
         // Set the minimum displacement
         locationRequest.setSmallestDisplacement(2);
         // Register for location updates
